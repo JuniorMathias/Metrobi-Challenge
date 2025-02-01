@@ -8,12 +8,12 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between p-4 bg-white shadow-md">
+      <header className=" fixed top-0 left-0 w-full  flex items-center justify-between p-4 bg-white shadow-md">
         <img src={logowithname} alt="metrobiLogo" className="w-20" />
         
         <nav className="hidden lg:flex space-x-6">
           {['For businesses', 'Locations', 'Features', 'Pricing', 'For drivers'].map((text, index) => (
-            <Link key={index} to="/" className="text-primary font-bold hover:text-primary-clear">{text}</Link>
+            <Link key={index} to="/" className="text-primary font-bold hover:text-purple-600">{text}</Link>
           ))}
         </nav>
 
@@ -23,7 +23,7 @@ export default function Header() {
           </button>
         </div>
 
-        <button className="bg-primary px-4 py-2 rounded hover:text-primary-clear text-white font-bold">
+        <button className="bg-primary px-4 py-2 rounded hover:text-purple-600 text-white font-bold">
           Get Started
         </button>
       </header>
@@ -31,7 +31,7 @@ export default function Header() {
       {isOpen && (
         <div className="fixed top-full left-0 w-full bg-white shadow-lg p-4 flex flex-col space-y-3 lg:hidden">
           {['For businesses', 'Locations', 'Features', 'Pricing', 'For drivers'].map((text, index) => (
-            <Link key={index} to="/" className="text-primary font-bold hover:text-primary-clear" onClick={() => setIsOpen(false)}>
+            <Link key={index} to="/" className="text-primary font-bold hover:text-purple-600" onClick={() => setIsOpen(false)}>
               {text}
             </Link>
           ))}

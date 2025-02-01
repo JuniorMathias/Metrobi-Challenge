@@ -1,12 +1,16 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Header from './components/Header/Header';
-import Footer from './components/footer/Footer';
-import Container from './components/layout/Container'
+import Container from './components/layout/Container';
+import Hero from './components/hero/Hero';
+import Sidebar from './components/sidebar/Sidebar'
 function App() {
   return (
     <Router>
       <Header />
-      <Footer />
+      <div className="pt-16">
+        <Hero />
+      </div>
+      <Sidebar />
       <Container>
         <Routes>
           <Route exact path="/">

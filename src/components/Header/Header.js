@@ -29,7 +29,7 @@ export default function Header() {
       </header>
 
       {isOpen && (
-        <div className="fixed top-full left-0 w-full bg-white shadow-lg p-4 flex flex-col space-y-3 lg:hidden">
+        <div className="fixed top-full left-0 w-full bg-white shadow-lg p-4 mt-16 flex flex-col space-y-3 lg:hidden">
           {['For businesses', 'Locations', 'Features', 'Pricing', 'For drivers'].map((text, index) => (
             <Link key={index} to="/" className="text-primary font-bold hover:text-purple-600" onClick={() => setIsOpen(false)}>
               {text}

@@ -5,6 +5,8 @@ import Hero from './components/hero/Hero';
 import Sidebar from './components/sidebar/Sidebar';
 import Main from './components/main/Main';
 import ExtraContent from './components/extra/ExtraContent';
+import RelatedImages from './components/related-images/RelatedImages';
+import RelatedPost from './components/related-post/RelatedPost';
 
 function App() {
   return (
@@ -31,6 +33,19 @@ function App() {
           <ExtraContent />
         </div>
       </div>
+      
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4">
+  <div className="lg:col-span-2">
+    <RelatedImages />
+  </div>
+  <div>
+    <RelatedPost />
+  </div>
+</div>
+
+      
+
+
 
       <Container>
         <Routes>
